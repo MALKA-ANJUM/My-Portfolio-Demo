@@ -1,8 +1,368 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+}
+
+
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+img{
+    width: 100%;
+}
+.container{
+    display: flex;
+    
+    width: 100%;
+    
+}
+.aside{
+    width: 40%;
+    
+    height: 100%;
+    position: fixed;
+    
+}
+.main{
+    margin-left: 40%;
+    width: 60%;
+    
+}
+.menu{ 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    transition: 1s;  
+    
+}
+.menu i:hover{
+    color: black;
+    background: #a9a9a9;
+    padding: 10px;
+}
+.menu i{
+    font-size: 1.5em;
+    color: #757575;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #fff;
+    padding: 0.5em;
+}
+.menu i:nth-child(2){
+    display: none;
+}
+.menu.active i:nth-child(1){
+    display: none;
+}
+.menu.active i:nth-child(2){
+    display: block; 
+    color: #fff;
+    z-index: 99;
+}
+.navigation{
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    background: #000;
+    z-index: 4;
+    transition: 0.5s;
+   
+}
+
+.navigation.active{
+    right: 0%;
+}
+.navigation li{
+    list-style: none;
+}
+.navigation li a{
+    display: inline-flex;
+    font-size: 2em;
+    margin: 5px;
+    text-decoration: none;
+    color: #757575;   
+    padding: 5px 20px;
+    text-transform: capitalize;
+}
+.navigation li a:hover{   
+    color: #fff;
+}
+
+.navigation li a:hover{   
+    color: #fff;
+}
+.image-gallery{
+    display: flex;
+    flex-direction: row; 
+    width: 100%; 
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    width: 50%;  
+    padding: 0.3em;
+}
+img{
+    width: 100%;
+}
+.title{
+    text-align: center;
+    padding: 2em;
+    margin: 4em auto;
+}
+.title h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    font-weight: 500;
+}
+.title p{
+    font-size: 0.6em;
+    padding: 1.5em 0;
+    letter-spacing: 0.5px;
+}
+.title button{
+    border: 0;
+    padding: 0.8em;
+    font-size: 0.7em;
+    letter-spacing: 0.8px;
+    margin-top: 1em;
+}
+.portfolio,
+.about,
+.skills,
+.reputation,
+.price,
+.contact{
+    margin: 6%;
+}
+.portfolio .portfolio-title p,
+.about .about-title p,
+.skills .skills-title p,
+.reputation .reputation-title p,
+.price .price-title p,
+.contact .contact-title p{
+    text-transform: capitalize;
+    font-family: 'Montserrat', sans-serif;
+    color: #75757E;
+    padding: 0.7em 0;
+    font-size: 1.3em;
+    border-bottom: 0.01px solid rgba(0, 0, 0, 0.1);
+}
+.about-desp p{
+    font-size: 0.6em;
+    color: #757575;
+    line-height: 1.4;
+    word-spacing: 2px;
+    padding: 1.5em 0;
+    letter-spacing: 0.4px;
+}
+.skills-bar .bar .bar-info{
+    margin: 0.8em 0;
+}
+.skills-bar .bar .bar-info span{
+    font-size: 0.7em;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: #757575;
+}
+.skills-bar .bar .progress-line{
+    height: 20px;
+    width: 100%;
+    background: #F1F1F1;
+    position: relative;
+}
+.skills-bar .bar .progress-line span{
+    height: 100%;
+    
+    background: #616161;
+    position: absolute;
+    color: white;
+    font-size: 0.8em;
+    text-align: center;
+}
+.skills-bar .bar .progress-line.photography span{
+    width: 95%;
+}
+.skills-bar .bar .progress-line.web span{
+    width: 85%;
+}
+.skills-bar .bar .progress-line.photoshop span{
+    width: 80%;
+}
+.achievements ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #616161;
+    margin: 1.5em 0;
+}
+.achievements ul li{
+    list-style: none;
+    text-align: center;
+    color: white;
+    padding: 1em;
+    font-family: 'Montserrat', sans-serif;
+}
+.achievements li span{
+    font-size: 0.65em;
+}
+.skills-btn button{
+    border: 0;
+    padding: 0.8em;
+    font-size: 0.7em;
+    letter-spacing: 0.8px;
+    margin-top: 1.5em;
+}
+.review-card{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0.5em 0;
+}
+.profile-img{
+    width: 80px;
+    clip-path: circle();
+}
+.review-info{
+    padding: 1em;
+
+}
+.review-info p:nth-child(1){
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    padding-bottom: 1em;
+}
+.review-info p:nth-child(1) span{
+    color: #7588B8;
+    font-size: 0.7rem;
+}
+.review-info p:nth-child(2){
+    color: #7588B8;
+    font-size: 0.6em;
+}
+.price-card{
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    border: 0;
+    box-shadow: 0 0 5px rgba( 0, 0, 0, 0.6);
+    
+    width: 49%;
+}
+.card:hover{
+    box-shadow: 0 0 15px rgba( 0, 0, 0, 0.6);
+}
+.card-head.card_1{
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    background: #616161;
+    color: #fff;
+    padding: 1.4em 0;
+}
+.card-head.card_2{
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 1.4em 0;
+}
+.card .card-feature ul{
+    list-style: none;
+    text-align: center;
+    color: #757575;
+   
+}
+.card .card-feature ul li{
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+    font-size: 0.65rem;
+    text-transform: capitalize;
+    padding: 1.2em 0;
+}
+.card-price{
+    font-size: 1.5rem;
+    text-align: center;
+    color: #757575;
+    padding: 0.5em 0;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+.card-price span{
+    font-size: 0.7rem;
+    color: #ACACAC;
+}
+.card-btn{
+    font-size: 0.5rem;
+    color: #000;
+    background: #F1F1F1;
+    text-align: center;
+    padding: 1.5em 0;
+
+}
+.card-btn button{
+    border: 0;
+    background: #fff;
+    padding: 0.5em;
+    text-transform: capitalize;
+}
+.card-btn button:hover{
+    background: #000;
+    color: #fff;
+}
+.contact-info{
+    padding: 1.5em 0;
+}
+.contact-info p{
+    font-size: 0.7rem;
+    color: #75757E;
+    padding-bottom: 1em;
+}
+.contact-info img{
+    margin: 1em 0;
+    filter: grayscale();
+    
+}
+.contact-info button{
+    border: 0;
+    padding: 0.8em;
+    font-size: 0.7em;
+    letter-spacing: 0.8px;
+    margin-top: 1.5em;
+}
+.contact-info input{
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.3em 0;
+}
+.footer{
+    background: #F7F7F7;
+    padding: 5%;
+    margin-top: 3%;
+    text-align: center;
+    color: #666666;
+}
+.footer .social_links{
+    padding: 1em;
+}
+.social_links i{
+    font-size: 1em;
+}
+.footer p{
+    font-size: 0.7em;
+}
+.footer a{
+    color: #666666;
 }
