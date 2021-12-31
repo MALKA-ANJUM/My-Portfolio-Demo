@@ -6,8 +6,6 @@
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
 }
-
-
 body{
     width: 100%;
     min-height: 100vh;
@@ -22,24 +20,21 @@ img{
     
 }
 .aside{
-    width: 40%;
-    
+    width: 40%; 
     height: 100%;
     position: fixed;
     
 }
 .main{
     margin-left: 40%;
-    width: 60%;
-    
+    width: 60%; 
 }
 .menu{ 
     display: flex;
     justify-content: flex-end;
     align-items: center;
     cursor: pointer;
-    transition: 1s;  
-    
+    transition: 1s;   
 }
 .menu i:hover{
     color: black;
@@ -78,10 +73,8 @@ img{
     flex-direction: column; 
     background: #000;
     z-index: 4;
-    transition: 0.5s;
-   
+    transition: 0.5s; 
 }
-
 .navigation.active{
     right: 0%;
 }
@@ -100,7 +93,6 @@ img{
 .navigation li a:hover{   
     color: #fff;
 }
-
 .navigation li a:hover{   
     color: #fff;
 }
@@ -310,7 +302,6 @@ img{
     background: #F1F1F1;
     text-align: center;
     padding: 1.5em 0;
-
 }
 .card-btn button{
     border: 0;
